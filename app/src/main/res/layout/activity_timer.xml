@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Timer">
+
+    <TextView
+        android:id="@+id/tx_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Timer"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_text_input"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_view_countdown"
+        android:layout_centerHorizontal="true"
+        android:hint="Minutes"
+        android:inputType="number"
+        android:maxLength="4" />
+
+    <Button
+        android:id="@+id/button_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edit_text_input"
+        android:layout_toEndOf="@+id/edit_text_input"
+        android:text="Set" />
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="00:00"
+        android:textColor="@android:color/black"
+        android:textSize="60sp" />
+
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_countdown"
+        android:layout_centerHorizontal="true"
+        android:text="start" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_countdown"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/button_start_pause"
+        android:text="reset"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bot_btn_1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Clock"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bot_btn_2" />
+
+        <Button
+            android:id="@+id/bot_btn_2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Timer"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/bot_btn_1"
+            app:layout_constraintRight_toLeftOf="@id/bot_btn_3" />
+
+        <Button
+            android:id="@+id/bot_btn_3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Stopwatch"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/bot_btn_2"
+            app:layout_constraintRight_toLeftOf="@id/bot_btn_4" />
+
+        <Button
+            android:id="@+id/bot_btn_4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Alarm"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/bot_btn_3"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

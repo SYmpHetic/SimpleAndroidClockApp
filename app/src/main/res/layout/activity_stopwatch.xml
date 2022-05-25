@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".StopwatchActivity">
+
+    <TextView
+        android:id="@+id/tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="30sp"
+        android:text="StopWatch"/>
+
+<TextView
+    android:id="@+id/time_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:textAppearance="@android:style/TextAppearance.Large"
+    android:textSize="56sp" />
+
+<Button
+    android:id="@+id/start_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="20dp"
+    android:onClick="onClickStart"
+    android:text="@string/start" />
+
+<Button
+    android:id="@+id/stop_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="8dp"
+    android:onClick="onClickStop"
+    android:text="@string/stop" />
+
+<Button
+    android:id="@+id/reset_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="8dp"
+    android:onClick="onClickReset"
+    android:text="@string/reset" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/bot_btn_1"
+            android:text="Clock"
+            android:textSize="10dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bot_btn_2"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/bot_btn_2"
+            android:text="Timer"
+            android:textSize="10dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/bot_btn_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bot_btn_3"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/bot_btn_3"
+            android:text="Stopwatch"
+            android:textSize="10dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/bot_btn_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bot_btn_4"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/bot_btn_4"
+            android:text="Alarm"
+            android:textSize="10dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/bot_btn_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
